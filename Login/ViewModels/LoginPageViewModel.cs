@@ -38,13 +38,13 @@ namespace Login.ViewModels
             UserService userService = new UserService();
             if (userService.TryLogin(user))
             {
-                msg = "Succeded!";
-                msgColor = Colors.Green;
+                Msg = "Succeded!";
+                MsgColor = Colors.Green;
             }
             else
             {
-                msg = "Failed!";
-                msgColor = Colors.Red;
+                Msg = "Failed!";
+                MsgColor = Colors.Red;
             }
 
         }
