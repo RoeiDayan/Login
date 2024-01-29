@@ -9,21 +9,30 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <Entry Text="{Binding Name}"
-                 VerticalOptions="Center" 
-  HorizontalOptions="Center"></Entry>
+        <Entry 
+         Placeholder="Name"
+         Text="{Binding Name}"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center" />
         
-        <Label Text="{Binding Name}"
-                 VerticalOptions="Center" 
-  HorizontalOptions="Center"></Label>
+        <Label 
+        Text="{Binding Name}"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center">
+        </Label>
 
 
-        <Entry Text="{Binding Password}"
-                 VerticalOptions="Center" 
-  HorizontalOptions="Center"></Entry>
-
-        <Label Text="{Binding Password}"  VerticalOptions="Center" 
-  HorizontalOptions="Center"></Label>
+          <Entry 
+         Placeholder="Password"
+         Text="{Binding Password}"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center" />
+        
+        <Label 
+        Text="{Binding Password}"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center">
+        </Label>
 
 
         <Button x:Name="Submit" Text="Submit"  VerticalOptions="Center" 
