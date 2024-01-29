@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Google.Crypto.Tink.Mac;
 
 namespace Login.Service
 {
@@ -19,31 +18,26 @@ namespace Login.Service
         }
         private void FillList()
         {
-            users.Add(new User
-            {
-                name = "Amitay",
-                password = "password"
-            });
-            users.Add(new User
-            {
-                name = "Sagi",
-                password = "password"
-            });
-            users.Add(new User
-            {
-                name = "Ori",
-                password = "password"
-            });
-            users.Add(new User
-            {
-                name = "Ofer",
-                password = "king"
-            });
+            users.Add(new User("password", "Amitay"));
+
+            users.Add(new User("password", "Sagi"));
+
+            users.Add(new User("password", "Ori"));
+
+            users.Add(new User("123" ,"Ofer"));
         }
-        //public bool LoginSucceeded()
-        //{
+        public bool TryLogin(User u)
+        {
             
-        //}
+            for(int i = 0; i < users.Count; i++)
+            {
+                if (users[i].compare(u)) 
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
 
 

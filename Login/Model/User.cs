@@ -10,6 +10,12 @@ namespace Login.Model
     {
         public string name {  get; set; }
         public string password {  get; set; }
+
+        public User(string pass, string name) 
+        {
+            this.name = name;
+            this.password = pass;
+        }
         
         public bool compare(User other)
         {
